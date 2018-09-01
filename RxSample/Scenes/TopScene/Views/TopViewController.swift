@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class ViewController: UIViewController {
+class TopViewController: UIViewController {
 
     @IBOutlet weak var button: UIButton!
     let disposeBag = DisposeBag()
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
 }
 
 // MARK: - bindings
-extension ViewController {
+extension TopViewController {
     func initBindings() {
         button.rx.tap.asDriver().drive(onNext: { () in
             print("hoge")
