@@ -29,7 +29,7 @@ class TableViewModel: TableViewModelType, TableViewModelInputType, TableViewMode
     }
     
     func viewDidLoad() {
-        GithubApi.shared.request(Github.GetUserProfile(name: "assaulter"))
+        QiitaApi.shared.request(Qiita.GetUserItems(name: "kz_kazuki"))
             .subscribe(onSuccess: { (profile) in
                 print(profile)
             }) { (error) in

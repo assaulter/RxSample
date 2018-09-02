@@ -23,6 +23,10 @@
 		361ADC04213BF0CE0060A1D2 /* GithubApiTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361ADC03213BF0CE0060A1D2 /* GithubApiTargetType.swift */; };
 		361ADC06213BF1470060A1D2 /* Github.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361ADC05213BF1470060A1D2 /* Github.swift */; };
 		361ADC09213BF3600060A1D2 /* GithubApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361ADC08213BF3600060A1D2 /* GithubApi.swift */; };
+		361ADC0D213BFDA60060A1D2 /* QiitaApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361ADC0C213BFDA60060A1D2 /* QiitaApi.swift */; };
+		361ADC0F213BFDD60060A1D2 /* QiitaApiTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361ADC0E213BFDD60060A1D2 /* QiitaApiTargetType.swift */; };
+		361ADC11213BFE0E0060A1D2 /* Qiita.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361ADC10213BFE0E0060A1D2 /* Qiita.swift */; };
+		361ADC14213BFEB10060A1D2 /* QiitaUserItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361ADC13213BFEB10060A1D2 /* QiitaUserItem.swift */; };
 		362D7EB5213B991700E0B026 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D7EB4213B991700E0B026 /* TableViewController.swift */; };
 		362D7EB7213B992600E0B026 /* TableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 362D7EB6213B992600E0B026 /* TableViewController.storyboard */; };
 		362D7EB9213B9A7900E0B026 /* TableSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D7EB8213B9A7900E0B026 /* TableSceneCoordinator.swift */; };
@@ -64,6 +68,10 @@
 		361ADC03213BF0CE0060A1D2 /* GithubApiTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubApiTargetType.swift; sourceTree = "<group>"; };
 		361ADC05213BF1470060A1D2 /* Github.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github.swift; sourceTree = "<group>"; };
 		361ADC08213BF3600060A1D2 /* GithubApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubApi.swift; sourceTree = "<group>"; };
+		361ADC0C213BFDA60060A1D2 /* QiitaApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaApi.swift; sourceTree = "<group>"; };
+		361ADC0E213BFDD60060A1D2 /* QiitaApiTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaApiTargetType.swift; sourceTree = "<group>"; };
+		361ADC10213BFE0E0060A1D2 /* Qiita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Qiita.swift; sourceTree = "<group>"; };
+		361ADC13213BFEB10060A1D2 /* QiitaUserItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaUserItem.swift; sourceTree = "<group>"; };
 		362D7EB4213B991700E0B026 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		362D7EB6213B992600E0B026 /* TableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TableViewController.storyboard; sourceTree = "<group>"; };
 		362D7EB8213B9A7900E0B026 /* TableSceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSceneCoordinator.swift; sourceTree = "<group>"; };
@@ -191,10 +199,8 @@
 		361ADBFE213BEC150060A1D2 /* Api */ = {
 			isa = PBXGroup;
 			children = (
-				361ADC07213BF2930060A1D2 /* Entities */,
-				361ADC03213BF0CE0060A1D2 /* GithubApiTargetType.swift */,
-				361ADC05213BF1470060A1D2 /* Github.swift */,
-				361ADC08213BF3600060A1D2 /* GithubApi.swift */,
+				361ADC0B213BFD7F0060A1D2 /* Qiita */,
+				361ADC0A213BFCB10060A1D2 /* Github */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -203,6 +209,36 @@
 			isa = PBXGroup;
 			children = (
 				361ADC01213BEE990060A1D2 /* Profile.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		361ADC0A213BFCB10060A1D2 /* Github */ = {
+			isa = PBXGroup;
+			children = (
+				361ADC07213BF2930060A1D2 /* Entities */,
+				361ADC03213BF0CE0060A1D2 /* GithubApiTargetType.swift */,
+				361ADC05213BF1470060A1D2 /* Github.swift */,
+				361ADC08213BF3600060A1D2 /* GithubApi.swift */,
+			);
+			path = Github;
+			sourceTree = "<group>";
+		};
+		361ADC0B213BFD7F0060A1D2 /* Qiita */ = {
+			isa = PBXGroup;
+			children = (
+				361ADC12213BFE920060A1D2 /* Entities */,
+				361ADC0C213BFDA60060A1D2 /* QiitaApi.swift */,
+				361ADC0E213BFDD60060A1D2 /* QiitaApiTargetType.swift */,
+				361ADC10213BFE0E0060A1D2 /* Qiita.swift */,
+			);
+			path = Qiita;
+			sourceTree = "<group>";
+		};
+		361ADC12213BFE920060A1D2 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				361ADC13213BFEB10060A1D2 /* QiitaUserItem.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -394,11 +430,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				361ADC0D213BFDA60060A1D2 /* QiitaApi.swift in Sources */,
 				361ADC09213BF3600060A1D2 /* GithubApi.swift in Sources */,
+				361ADC0F213BFDD60060A1D2 /* QiitaApiTargetType.swift in Sources */,
 				3602D625213A3ADF00917A60 /* AppCoordinator.swift in Sources */,
 				3602D62F213A404200917A60 /* TopSceneCoordinator.swift in Sources */,
+				361ADC11213BFE0E0060A1D2 /* Qiita.swift in Sources */,
 				3602D632213A442200917A60 /* UIViewController+instantiate.swift in Sources */,
 				3602D6072139747B00917A60 /* TopViewController.swift in Sources */,
+				361ADC14213BFEB10060A1D2 /* QiitaUserItem.swift in Sources */,
 				362D7EC1213B9CBE00E0B026 /* TableViewModel.swift in Sources */,
 				3602D6052139747B00917A60 /* AppDelegate.swift in Sources */,
 				362D7EBB213B9C5200E0B026 /* TopViewModel.swift in Sources */,
