@@ -19,6 +19,16 @@
 		3602D62F213A404200917A60 /* TopSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3602D62E213A404200917A60 /* TopSceneCoordinator.swift */; };
 		3602D632213A442200917A60 /* UIViewController+instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3602D631213A442200917A60 /* UIViewController+instantiate.swift */; };
 		3602D634213A450000917A60 /* NSObject+className.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3602D633213A450000917A60 /* NSObject+className.swift */; };
+		361ADC02213BEE990060A1D2 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361ADC01213BEE990060A1D2 /* Profile.swift */; };
+		361ADC04213BF0CE0060A1D2 /* GithubApiTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361ADC03213BF0CE0060A1D2 /* GithubApiTargetType.swift */; };
+		361ADC06213BF1470060A1D2 /* Github.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361ADC05213BF1470060A1D2 /* Github.swift */; };
+		361ADC09213BF3600060A1D2 /* GithubApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361ADC08213BF3600060A1D2 /* GithubApi.swift */; };
+		361ADC0D213BFDA60060A1D2 /* QiitaApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361ADC0C213BFDA60060A1D2 /* QiitaApi.swift */; };
+		361ADC0F213BFDD60060A1D2 /* QiitaApiTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361ADC0E213BFDD60060A1D2 /* QiitaApiTargetType.swift */; };
+		361ADC11213BFE0E0060A1D2 /* Qiita.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361ADC10213BFE0E0060A1D2 /* Qiita.swift */; };
+		361ADC14213BFEB10060A1D2 /* QiitaUserItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361ADC13213BFEB10060A1D2 /* QiitaUserItem.swift */; };
+		361ADC16213C28C10060A1D2 /* QiitaItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361ADC15213C28C10060A1D2 /* QiitaItemCell.swift */; };
+		361ADC1A213C2A230060A1D2 /* QiitaItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 361ADC19213C2A230060A1D2 /* QiitaItemCell.xib */; };
 		362D7EB5213B991700E0B026 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D7EB4213B991700E0B026 /* TableViewController.swift */; };
 		362D7EB7213B992600E0B026 /* TableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 362D7EB6213B992600E0B026 /* TableViewController.storyboard */; };
 		362D7EB9213B9A7900E0B026 /* TableSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D7EB8213B9A7900E0B026 /* TableSceneCoordinator.swift */; };
@@ -56,6 +66,16 @@
 		3602D62E213A404200917A60 /* TopSceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSceneCoordinator.swift; sourceTree = "<group>"; };
 		3602D631213A442200917A60 /* UIViewController+instantiate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+instantiate.swift"; sourceTree = "<group>"; };
 		3602D633213A450000917A60 /* NSObject+className.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+className.swift"; sourceTree = "<group>"; };
+		361ADC01213BEE990060A1D2 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		361ADC03213BF0CE0060A1D2 /* GithubApiTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubApiTargetType.swift; sourceTree = "<group>"; };
+		361ADC05213BF1470060A1D2 /* Github.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github.swift; sourceTree = "<group>"; };
+		361ADC08213BF3600060A1D2 /* GithubApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubApi.swift; sourceTree = "<group>"; };
+		361ADC0C213BFDA60060A1D2 /* QiitaApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaApi.swift; sourceTree = "<group>"; };
+		361ADC0E213BFDD60060A1D2 /* QiitaApiTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaApiTargetType.swift; sourceTree = "<group>"; };
+		361ADC10213BFE0E0060A1D2 /* Qiita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Qiita.swift; sourceTree = "<group>"; };
+		361ADC13213BFEB10060A1D2 /* QiitaUserItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaUserItem.swift; sourceTree = "<group>"; };
+		361ADC15213C28C10060A1D2 /* QiitaItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaItemCell.swift; sourceTree = "<group>"; };
+		361ADC19213C2A230060A1D2 /* QiitaItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QiitaItemCell.xib; sourceTree = "<group>"; };
 		362D7EB4213B991700E0B026 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		362D7EB6213B992600E0B026 /* TableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TableViewController.storyboard; sourceTree = "<group>"; };
 		362D7EB8213B9A7900E0B026 /* TableSceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSceneCoordinator.swift; sourceTree = "<group>"; };
@@ -110,6 +130,7 @@
 		3602D6032139747B00917A60 /* RxSample */ = {
 			isa = PBXGroup;
 			children = (
+				361ADBFE213BEC150060A1D2 /* Api */,
 				3602D630213A441500917A60 /* Extensions */,
 				3602D62B213A400500917A60 /* Scenes */,
 				3602D626213A3D2800917A60 /* Base */,
@@ -179,6 +200,53 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		361ADBFE213BEC150060A1D2 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				361ADC0B213BFD7F0060A1D2 /* Qiita */,
+				361ADC0A213BFCB10060A1D2 /* Github */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		361ADC07213BF2930060A1D2 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				361ADC01213BEE990060A1D2 /* Profile.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		361ADC0A213BFCB10060A1D2 /* Github */ = {
+			isa = PBXGroup;
+			children = (
+				361ADC07213BF2930060A1D2 /* Entities */,
+				361ADC03213BF0CE0060A1D2 /* GithubApiTargetType.swift */,
+				361ADC05213BF1470060A1D2 /* Github.swift */,
+				361ADC08213BF3600060A1D2 /* GithubApi.swift */,
+			);
+			path = Github;
+			sourceTree = "<group>";
+		};
+		361ADC0B213BFD7F0060A1D2 /* Qiita */ = {
+			isa = PBXGroup;
+			children = (
+				361ADC12213BFE920060A1D2 /* Entities */,
+				361ADC0C213BFDA60060A1D2 /* QiitaApi.swift */,
+				361ADC0E213BFDD60060A1D2 /* QiitaApiTargetType.swift */,
+				361ADC10213BFE0E0060A1D2 /* Qiita.swift */,
+			);
+			path = Qiita;
+			sourceTree = "<group>";
+		};
+		361ADC12213BFE920060A1D2 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				361ADC13213BFEB10060A1D2 /* QiitaUserItem.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		362D7EB2213B98EC00E0B026 /* TableScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +262,8 @@
 				362D7EB4213B991700E0B026 /* TableViewController.swift */,
 				362D7EB6213B992600E0B026 /* TableViewController.storyboard */,
 				362D7EC0213B9CBE00E0B026 /* TableViewModel.swift */,
+				361ADC15213C28C10060A1D2 /* QiitaItemCell.swift */,
+				361ADC19213C2A230060A1D2 /* QiitaItemCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -298,6 +368,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				361ADC1A213C2A230060A1D2 /* QiitaItemCell.xib in Resources */,
 				362D7EB7213B992600E0B026 /* TableViewController.storyboard in Resources */,
 				3602D60F2139747E00917A60 /* LaunchScreen.storyboard in Resources */,
 				3602D60C2139747E00917A60 /* Assets.xcassets in Resources */,
@@ -322,11 +393,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RxSample/Pods-RxSample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
@@ -360,18 +437,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				361ADC0D213BFDA60060A1D2 /* QiitaApi.swift in Sources */,
+				361ADC09213BF3600060A1D2 /* GithubApi.swift in Sources */,
+				361ADC0F213BFDD60060A1D2 /* QiitaApiTargetType.swift in Sources */,
 				3602D625213A3ADF00917A60 /* AppCoordinator.swift in Sources */,
 				3602D62F213A404200917A60 /* TopSceneCoordinator.swift in Sources */,
+				361ADC16213C28C10060A1D2 /* QiitaItemCell.swift in Sources */,
+				361ADC11213BFE0E0060A1D2 /* Qiita.swift in Sources */,
 				3602D632213A442200917A60 /* UIViewController+instantiate.swift in Sources */,
 				3602D6072139747B00917A60 /* TopViewController.swift in Sources */,
+				361ADC14213BFEB10060A1D2 /* QiitaUserItem.swift in Sources */,
 				362D7EC1213B9CBE00E0B026 /* TableViewModel.swift in Sources */,
 				3602D6052139747B00917A60 /* AppDelegate.swift in Sources */,
 				362D7EBB213B9C5200E0B026 /* TopViewModel.swift in Sources */,
 				362D7EB9213B9A7900E0B026 /* TableSceneCoordinator.swift in Sources */,
+				361ADC06213BF1470060A1D2 /* Github.swift in Sources */,
+				361ADC02213BEE990060A1D2 /* Profile.swift in Sources */,
 				362D7EBD213B9C8A00E0B026 /* BaseViewModelType.swift in Sources */,
 				3602D634213A450000917A60 /* NSObject+className.swift in Sources */,
 				3602D628213A3D3400917A60 /* BaseCoordinator.swift in Sources */,
 				362D7EB5213B991700E0B026 /* TableViewController.swift in Sources */,
+				361ADC04213BF0CE0060A1D2 /* GithubApiTargetType.swift in Sources */,
 				362D7EBF213B9C9B00E0B026 /* BaseViewType.swift in Sources */,
 				3602D62A213A3D5200917A60 /* CoordinatorType.swift in Sources */,
 			);
