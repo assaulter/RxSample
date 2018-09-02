@@ -10,14 +10,26 @@ import Foundation
 import RxSwift
 
 protocol TopCoordinatorRouterType {
-    
+    func startTableCoordinator()
 }
 
-class TopCoordinator: BaseCoordinator {
+class TopCoordinator: BaseCoordinator, TopCoordinatorRouterType {
     override func start() {
         // create views and DI
         let topViewController = TopViewController.instantiate()
+        topViewController.viewModel = TopViewmodel(self)
         let navigationController = UINavigationController(rootViewController: topViewController)
         initialNavigationController?.present(navigationController, animated: false, completion: nil)
+    }
+    
+    func startTableCoordinator() {
+        let tableCoordinator = TableCoordinator()
+        tableCoordinator.initialNavigationController = initialNavigationController
+        childCoordinators[.tableScene] = tableCoordinator
+        tableCoordinator.finishObserable?.subscribe(onNext: { (_) in
+            self.finish(.tableScene)
+        }, onError: nil, onCompleted: nil, onDisposed: nil)
+        .disposed(by: disposeBag)
+        tableCoordinator.start()
     }
 }

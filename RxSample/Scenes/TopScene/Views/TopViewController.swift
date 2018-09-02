@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 
 class TopViewController: UIViewController {
-
+    var viewModel: TopViewModelType!
     @IBOutlet weak var button: UIButton!
     let disposeBag = DisposeBag()
     
@@ -31,7 +31,7 @@ class TopViewController: UIViewController {
 extension TopViewController {
     func initBindings() {
         button.rx.tap.asDriver().drive(onNext: { () in
-            print("hoge")
+            self.viewModel.input.transitionToTableScene()
         }, onCompleted: nil, onDisposed: nil).disposed(by: disposeBag)
     }
 }
