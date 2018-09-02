@@ -19,6 +19,8 @@
 		3602D62F213A404200917A60 /* TopSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3602D62E213A404200917A60 /* TopSceneCoordinator.swift */; };
 		3602D632213A442200917A60 /* UIViewController+instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3602D631213A442200917A60 /* UIViewController+instantiate.swift */; };
 		3602D634213A450000917A60 /* NSObject+className.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3602D633213A450000917A60 /* NSObject+className.swift */; };
+		361ADC00213BEC240060A1D2 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361ADBFF213BEC240060A1D2 /* Api.swift */; };
+		361ADC02213BEE990060A1D2 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361ADC01213BEE990060A1D2 /* Profile.swift */; };
 		362D7EB5213B991700E0B026 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D7EB4213B991700E0B026 /* TableViewController.swift */; };
 		362D7EB7213B992600E0B026 /* TableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 362D7EB6213B992600E0B026 /* TableViewController.storyboard */; };
 		362D7EB9213B9A7900E0B026 /* TableSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D7EB8213B9A7900E0B026 /* TableSceneCoordinator.swift */; };
@@ -56,6 +58,8 @@
 		3602D62E213A404200917A60 /* TopSceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSceneCoordinator.swift; sourceTree = "<group>"; };
 		3602D631213A442200917A60 /* UIViewController+instantiate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+instantiate.swift"; sourceTree = "<group>"; };
 		3602D633213A450000917A60 /* NSObject+className.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+className.swift"; sourceTree = "<group>"; };
+		361ADBFF213BEC240060A1D2 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		361ADC01213BEE990060A1D2 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		362D7EB4213B991700E0B026 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		362D7EB6213B992600E0B026 /* TableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TableViewController.storyboard; sourceTree = "<group>"; };
 		362D7EB8213B9A7900E0B026 /* TableSceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSceneCoordinator.swift; sourceTree = "<group>"; };
@@ -110,6 +114,7 @@
 		3602D6032139747B00917A60 /* RxSample */ = {
 			isa = PBXGroup;
 			children = (
+				361ADBFE213BEC150060A1D2 /* Api */,
 				3602D630213A441500917A60 /* Extensions */,
 				3602D62B213A400500917A60 /* Scenes */,
 				3602D626213A3D2800917A60 /* Base */,
@@ -177,6 +182,15 @@
 				3602D633213A450000917A60 /* NSObject+className.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		361ADBFE213BEC150060A1D2 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				361ADBFF213BEC240060A1D2 /* Api.swift */,
+				361ADC01213BEE990060A1D2 /* Profile.swift */,
+			);
+			path = Api;
 			sourceTree = "<group>";
 		};
 		362D7EB2213B98EC00E0B026 /* TableScene */ = {
@@ -369,11 +383,13 @@
 				3602D625213A3ADF00917A60 /* AppCoordinator.swift in Sources */,
 				3602D62F213A404200917A60 /* TopSceneCoordinator.swift in Sources */,
 				3602D632213A442200917A60 /* UIViewController+instantiate.swift in Sources */,
+				361ADC00213BEC240060A1D2 /* Api.swift in Sources */,
 				3602D6072139747B00917A60 /* TopViewController.swift in Sources */,
 				362D7EC1213B9CBE00E0B026 /* TableViewModel.swift in Sources */,
 				3602D6052139747B00917A60 /* AppDelegate.swift in Sources */,
 				362D7EBB213B9C5200E0B026 /* TopViewModel.swift in Sources */,
 				362D7EB9213B9A7900E0B026 /* TableSceneCoordinator.swift in Sources */,
+				361ADC02213BEE990060A1D2 /* Profile.swift in Sources */,
 				362D7EBD213B9C8A00E0B026 /* BaseViewModelType.swift in Sources */,
 				3602D634213A450000917A60 /* NSObject+className.swift in Sources */,
 				3602D628213A3D3400917A60 /* BaseCoordinator.swift in Sources */,

@@ -20,6 +20,7 @@ class TableViewController: UIViewController {
         // Do any additional setup after loading the view.
         initializeView()
         initializeBinding()
+        viewModel.input.viewDidLoad()
     }
 
     override func didReceiveMemoryWarning() {
