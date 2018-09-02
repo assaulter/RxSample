@@ -13,7 +13,10 @@ class TableViewController: UIViewController {
     let disposeBag = DisposeBag()
     var viewModel: TableViewModelType!
     var rightCancelButton: UIBarButtonItem?
-
+    @IBOutlet weak var tableView: UITableView!
+    
+    private let cellIdentifier = "QiitaItemCell"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -48,9 +51,13 @@ extension TableViewController: BaseViewType {
         }, onCompleted: nil, onDisposed: nil)
         .disposed(by: disposeBag)
         
-        viewModel.output.itemsObservable.subscribe(onNext: { (items) in
-            print(items)
-        }, onError: nil, onCompleted: nil, onDisposed: nil)
+        viewModel.output.itemsObservable
+            .bind(to: tableView.rx.items(cellIdentifier: cellIdentifier)) { row, element, cell in
+                
+                if let cell = cell as? QiitaItemCell {
+                    cell.label.text = element.title
+                }
+        }
         .disposed(by: disposeBag)
     }
     
@@ -61,5 +68,8 @@ extension TableViewController: BaseViewType {
         navigationBar?.prefersLargeTitles = true
         navigationItem.title = "TableView"
         navigationItem.setRightBarButton(rightCancelButton, animated: false)
+        
+        // setup tableview cell
+        tableView.register(UINib(nibName: "QiitaItemCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
     }
 }
