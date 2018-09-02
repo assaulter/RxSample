@@ -20,6 +20,7 @@ class BaseCoordinator: CoordinatorType {
     func start() {
     }
     func finish(_ index: AppCoordinatorNavigation) {
+        // remove reference
         childCoordinators.removeValue(forKey: index)
     }
 }

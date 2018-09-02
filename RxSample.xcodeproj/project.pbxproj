@@ -19,6 +19,13 @@
 		3602D62F213A404200917A60 /* TopSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3602D62E213A404200917A60 /* TopSceneCoordinator.swift */; };
 		3602D632213A442200917A60 /* UIViewController+instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3602D631213A442200917A60 /* UIViewController+instantiate.swift */; };
 		3602D634213A450000917A60 /* NSObject+className.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3602D633213A450000917A60 /* NSObject+className.swift */; };
+		362D7EB5213B991700E0B026 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D7EB4213B991700E0B026 /* TableViewController.swift */; };
+		362D7EB7213B992600E0B026 /* TableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 362D7EB6213B992600E0B026 /* TableViewController.storyboard */; };
+		362D7EB9213B9A7900E0B026 /* TableSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D7EB8213B9A7900E0B026 /* TableSceneCoordinator.swift */; };
+		362D7EBB213B9C5200E0B026 /* TopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D7EBA213B9C5200E0B026 /* TopViewModel.swift */; };
+		362D7EBD213B9C8A00E0B026 /* BaseViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D7EBC213B9C8A00E0B026 /* BaseViewModelType.swift */; };
+		362D7EBF213B9C9B00E0B026 /* BaseViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D7EBE213B9C9A00E0B026 /* BaseViewType.swift */; };
+		362D7EC1213B9CBE00E0B026 /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D7EC0213B9CBE00E0B026 /* TableViewModel.swift */; };
 		D1D2CEE6193868F376702BE2 /* Pods_RxSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE72AD90E4E2F8F87991487E /* Pods_RxSample.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +56,13 @@
 		3602D62E213A404200917A60 /* TopSceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSceneCoordinator.swift; sourceTree = "<group>"; };
 		3602D631213A442200917A60 /* UIViewController+instantiate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+instantiate.swift"; sourceTree = "<group>"; };
 		3602D633213A450000917A60 /* NSObject+className.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+className.swift"; sourceTree = "<group>"; };
+		362D7EB4213B991700E0B026 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		362D7EB6213B992600E0B026 /* TableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TableViewController.storyboard; sourceTree = "<group>"; };
+		362D7EB8213B9A7900E0B026 /* TableSceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSceneCoordinator.swift; sourceTree = "<group>"; };
+		362D7EBA213B9C5200E0B026 /* TopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewModel.swift; sourceTree = "<group>"; };
+		362D7EBC213B9C8A00E0B026 /* BaseViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModelType.swift; sourceTree = "<group>"; };
+		362D7EBE213B9C9A00E0B026 /* BaseViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewType.swift; sourceTree = "<group>"; };
+		362D7EC0213B9CBE00E0B026 /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
 		74B751192E8EB18D4BAFCCDC /* Pods-RxSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSample/Pods-RxSample.release.xcconfig"; sourceTree = "<group>"; };
 		AE72AD90E4E2F8F87991487E /* Pods_RxSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC3F9F1D35F0BB0EE74F634C /* Pods-RxSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSample/Pods-RxSample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +136,8 @@
 			children = (
 				3602D627213A3D3400917A60 /* BaseCoordinator.swift */,
 				3602D629213A3D5200917A60 /* CoordinatorType.swift */,
+				362D7EBC213B9C8A00E0B026 /* BaseViewModelType.swift */,
+				362D7EBE213B9C9A00E0B026 /* BaseViewType.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -129,6 +145,7 @@
 		3602D62B213A400500917A60 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				362D7EB2213B98EC00E0B026 /* TableScene */,
 				3602D62C213A400C00917A60 /* TopScene */,
 			);
 			path = Scenes;
@@ -148,6 +165,7 @@
 			children = (
 				3602D6062139747B00917A60 /* TopViewController.swift */,
 				3602D6082139747B00917A60 /* TopViewController.storyboard */,
+				362D7EBA213B9C5200E0B026 /* TopViewModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -159,6 +177,25 @@
 				3602D633213A450000917A60 /* NSObject+className.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		362D7EB2213B98EC00E0B026 /* TableScene */ = {
+			isa = PBXGroup;
+			children = (
+				362D7EB3213B98F600E0B026 /* Views */,
+				362D7EB8213B9A7900E0B026 /* TableSceneCoordinator.swift */,
+			);
+			path = TableScene;
+			sourceTree = "<group>";
+		};
+		362D7EB3213B98F600E0B026 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				362D7EB4213B991700E0B026 /* TableViewController.swift */,
+				362D7EB6213B992600E0B026 /* TableViewController.storyboard */,
+				362D7EC0213B9CBE00E0B026 /* TableViewModel.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		7A87FB8A6F74773CA2FEC5ED /* Frameworks */ = {
@@ -261,6 +298,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				362D7EB7213B992600E0B026 /* TableViewController.storyboard in Resources */,
 				3602D60F2139747E00917A60 /* LaunchScreen.storyboard in Resources */,
 				3602D60C2139747E00917A60 /* Assets.xcassets in Resources */,
 				3602D60A2139747B00917A60 /* TopViewController.storyboard in Resources */,
@@ -326,9 +364,15 @@
 				3602D62F213A404200917A60 /* TopSceneCoordinator.swift in Sources */,
 				3602D632213A442200917A60 /* UIViewController+instantiate.swift in Sources */,
 				3602D6072139747B00917A60 /* TopViewController.swift in Sources */,
+				362D7EC1213B9CBE00E0B026 /* TableViewModel.swift in Sources */,
 				3602D6052139747B00917A60 /* AppDelegate.swift in Sources */,
+				362D7EBB213B9C5200E0B026 /* TopViewModel.swift in Sources */,
+				362D7EB9213B9A7900E0B026 /* TableSceneCoordinator.swift in Sources */,
+				362D7EBD213B9C8A00E0B026 /* BaseViewModelType.swift in Sources */,
 				3602D634213A450000917A60 /* NSObject+className.swift in Sources */,
 				3602D628213A3D3400917A60 /* BaseCoordinator.swift in Sources */,
+				362D7EB5213B991700E0B026 /* TableViewController.swift in Sources */,
+				362D7EBF213B9C9B00E0B026 /* BaseViewType.swift in Sources */,
 				3602D62A213A3D5200917A60 /* CoordinatorType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
