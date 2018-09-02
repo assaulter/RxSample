@@ -29,10 +29,7 @@ class TableViewModel: TableViewModelType, TableViewModelInputType, TableViewMode
     }
     
     func viewDidLoad() {
-        let provider = MoyaProvider<Github>()
-        provider.rx.request(.userProfile("assaulter"))
-            .filterSuccessfulStatusCodes()
-        .map(Profile.self)
+        Api.shared.request(Github.GetUserProfile(name: "assaulter"))
             .subscribe(onSuccess: { (profile) in
                 print(profile)
             }) { (error) in

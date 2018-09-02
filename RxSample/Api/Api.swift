@@ -7,45 +7,16 @@
 //
 
 import Moya
+import RxSwift
 
-extension String {
-    var urlEscaped: String {
-        return addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
-    }
-}
-
-enum Github {
-    case userProfile(String)
-}
-
-extension Github: TargetType {
-    var baseURL: URL {
-        return URL(string: "https://api.github.com")!
-    }
+class Api {
+    static let shared = Api()
+    private let provider = MoyaProvider<MultiTarget>()
     
-    var path: String {
-        switch self {
-        case .userProfile(let name):
-            return "/users/\(name.urlEscaped)"
-        }
+    func request<R>(_ request: R) -> Single<R.Response> where R: GithubApiTargetType {
+        let target = MultiTarget(request)
+        return provider.rx.request(target)
+            .filterSuccessfulStatusCodes()
+            .map(R.Response.self)
     }
-    
-    var method: Method {
-        return .get
-    }
-    
-    var sampleData: Data {
-        return Data()
-    }
-    
-    var task: Task {
-        switch self {
-        case .userProfile(_):
-            return .requestPlain
-        }
-    }
-    
-    var headers: [String : String]? {
-        return nil
-    }    
 }
