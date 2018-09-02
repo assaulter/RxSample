@@ -29,7 +29,7 @@ class TableViewModel: TableViewModelType, TableViewModelInputType, TableViewMode
     }
     
     func viewDidLoad() {
-        Api.shared.request(Github.GetUserProfile(name: "assaulter"))
+        GithubApi.shared.request(Github.GetUserProfile(name: "assaulter"))
             .subscribe(onSuccess: { (profile) in
                 print(profile)
             }) { (error) in

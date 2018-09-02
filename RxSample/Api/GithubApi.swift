@@ -1,5 +1,5 @@
 //
-//  Api.swift
+//  GithubApi.swift
 //  RxSample
 //
 //  Created by Kazuki Kubo on 2018/09/02.
@@ -9,8 +9,8 @@
 import Moya
 import RxSwift
 
-class Api {
-    static let shared = Api()
+class GithubApi {
+    static let shared = GithubApi()
     private let provider = MoyaProvider<MultiTarget>()
     
     func request<R>(_ request: R) -> Single<R.Response> where R: GithubApiTargetType {
