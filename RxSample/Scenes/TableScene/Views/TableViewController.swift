@@ -47,6 +47,11 @@ extension TableViewController: BaseViewType {
             self.viewModel.input.dismissTableView()
         }, onCompleted: nil, onDisposed: nil)
         .disposed(by: disposeBag)
+        
+        viewModel.output.itemsObservable.subscribe(onNext: { (items) in
+            print(items)
+        }, onError: nil, onCompleted: nil, onDisposed: nil)
+        .disposed(by: disposeBag)
     }
     
     func initializeView() {
