@@ -71,5 +71,7 @@ extension TableViewController: BaseViewType {
         
         // setup tableview cell
         tableView.register(UINib(nibName: "QiitaItemCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
 }

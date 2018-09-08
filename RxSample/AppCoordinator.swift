@@ -52,5 +52,6 @@ class AppCoordinator: BaseCoordinator {
 enum AppCoordinatorNavigation: Hashable {
     case topScene
     case tableScene
+    case tableHeaderScene
 }
 

@@ -18,20 +18,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xuS-iq-ZmJ">
-                                <rect key="frame" x="164" y="318" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ZfJ-X3-6po">
+                                <rect key="frame" x="118.5" y="295.5" width="138" height="76"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xuS-iq-ZmJ" userLabel="Table Scene">
+                                        <rect key="frame" x="27" y="0.0" width="84" height="30"/>
+                                        <state key="normal" title="Table Scene"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulb-nI-Dta">
+                                        <rect key="frame" x="0.0" y="46" width="138" height="30"/>
+                                        <state key="normal" title="Table Header Scene"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="xuS-iq-ZmJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JyO-3S-T7V"/>
-                            <constraint firstItem="xuS-iq-ZmJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="m3n-Dk-PCa"/>
+                            <constraint firstItem="ZfJ-X3-6po" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1hR-8A-VyK"/>
+                            <constraint firstItem="ZfJ-X3-6po" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PrW-ha-gql"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="button" destination="xuS-iq-ZmJ" id="WMt-Dv-4JO"/>
+                        <outlet property="tableHeaderButton" destination="ulb-nI-Dta" id="Kye-mv-w2i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
