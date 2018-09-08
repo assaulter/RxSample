@@ -9,7 +9,9 @@
 import UIKit
 
 class TableHeaderViewController: UIViewController {
-
+    @IBOutlet weak var tableView: UITableView!
+    private let cellId = "header_sample"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,14 +35,26 @@ class TableHeaderViewController: UIViewController {
     }
     */
 }
-
+// MARK: - BaseTypeView
 extension TableHeaderViewController: BaseViewType {
     func initializeBinding() {
     }
     
     func initializeView() {
+        // title
         navigationItem.title = "Table Header"
+        // tableview
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
+        tableView.sectionHeaderHeight = 200
+        tableView.delegate = self
     }
-    
-    
+}
+// MARK: - UITableViewDelegate
+extension TableHeaderViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.blue
+        
+        return headerView
+    }
 }
