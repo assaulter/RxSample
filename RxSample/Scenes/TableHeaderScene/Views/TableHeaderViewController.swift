@@ -12,8 +12,9 @@ class TableHeaderViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        initializeView()
+        initializeBinding()
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,5 +32,15 @@ class TableHeaderViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+}
 
+extension TableHeaderViewController: BaseViewType {
+    func initializeBinding() {
+    }
+    
+    func initializeView() {
+        navigationItem.title = "Table Header"
+    }
+    
+    
 }
