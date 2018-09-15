@@ -11,6 +11,7 @@ import RxSwift
 protocol TopViewModelInputType: BaseViewModelInputType {
     func transitionToTableScene()
     func transitionToTableHeaderScene()
+    func transitToMyWebScene()
 }
 
 protocol TopViewModelOutoutType: BaseViewModelOuputType {
@@ -39,5 +40,9 @@ class TopViewmodel: TopViewModelType, TopViewModelInputType, TopViewModelOutoutT
     
     func transitionToTableHeaderScene() {
         router.startTableHeaderCoordinator()
+    }
+    
+    func transitToMyWebScene() {
+        router.startMyWebCoordinator()
     }
 }

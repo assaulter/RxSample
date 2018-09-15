@@ -14,6 +14,7 @@ class TopViewController: UIViewController {
     var viewModel: TopViewModelType!
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var tableHeaderButton: UIButton!
+    @IBOutlet weak var myWebButton: UIButton!
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -31,14 +32,17 @@ class TopViewController: UIViewController {
 // MARK: - bindings
 extension TopViewController: BaseViewType {
     func initializeBinding() {
-        button.rx.tap.asDriver().drive(onNext: { () in
-            self.viewModel.input.transitionToTableScene()
+        button.rx.tap.asDriver().drive(onNext: { [weak self] (_) in
+            self?.viewModel.input.transitionToTableScene()
         }, onCompleted: nil, onDisposed: nil).disposed(by: disposeBag)
         
-        tableHeaderButton.rx.tap.asDriver().drive(onNext: { () in
-            self.viewModel.input.transitionToTableHeaderScene()
+        tableHeaderButton.rx.tap.asDriver().drive(onNext: { [weak self] (_) in
+            self?.viewModel.input.transitionToTableHeaderScene()
         })
         .disposed(by: disposeBag)
+        myWebButton.rx.tap.asDriver().drive(onNext: { [weak self] (_) in
+            self?.viewModel.input.transitToMyWebScene()
+        }).disposed(by: disposeBag)
     }
     
     func initializeView() {

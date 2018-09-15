@@ -39,6 +39,10 @@
 		362D7EBD213B9C8A00E0B026 /* BaseViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D7EBC213B9C8A00E0B026 /* BaseViewModelType.swift */; };
 		362D7EBF213B9C9B00E0B026 /* BaseViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D7EBE213B9C9A00E0B026 /* BaseViewType.swift */; };
 		362D7EC1213B9CBE00E0B026 /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D7EC0213B9CBE00E0B026 /* TableViewModel.swift */; };
+		363B10D1214D22DC00371831 /* MyWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363B10CF214D22DC00371831 /* MyWebViewController.swift */; };
+		363B10D2214D22DC00371831 /* MyWebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363B10D0214D22DC00371831 /* MyWebViewModel.swift */; };
+		363B10D4214D231800371831 /* MyWebViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 363B10D3214D231800371831 /* MyWebViewController.storyboard */; };
+		363B10D6214D247D00371831 /* MyWebCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363B10D5214D247D00371831 /* MyWebCoordinator.swift */; };
 		D1D2CEE6193868F376702BE2 /* Pods_RxSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE72AD90E4E2F8F87991487E /* Pods_RxSample.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +93,10 @@
 		362D7EBC213B9C8A00E0B026 /* BaseViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModelType.swift; sourceTree = "<group>"; };
 		362D7EBE213B9C9A00E0B026 /* BaseViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewType.swift; sourceTree = "<group>"; };
 		362D7EC0213B9CBE00E0B026 /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
+		363B10CF214D22DC00371831 /* MyWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWebViewController.swift; sourceTree = "<group>"; };
+		363B10D0214D22DC00371831 /* MyWebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWebViewModel.swift; sourceTree = "<group>"; };
+		363B10D3214D231800371831 /* MyWebViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyWebViewController.storyboard; sourceTree = "<group>"; };
+		363B10D5214D247D00371831 /* MyWebCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWebCoordinator.swift; sourceTree = "<group>"; };
 		74B751192E8EB18D4BAFCCDC /* Pods-RxSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSample/Pods-RxSample.release.xcconfig"; sourceTree = "<group>"; };
 		AE72AD90E4E2F8F87991487E /* Pods_RxSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC3F9F1D35F0BB0EE74F634C /* Pods-RxSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSample/Pods-RxSample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -172,6 +180,7 @@
 		3602D62B213A400500917A60 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				363B10C7214D211D00371831 /* MyWebScene */,
 				3609AC022143E5DA0069D5E2 /* TableHeaderScene */,
 				362D7EB2213B98EC00E0B026 /* TableScene */,
 				3602D62C213A400C00917A60 /* TopScene */,
@@ -293,6 +302,25 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		363B10C7214D211D00371831 /* MyWebScene */ = {
+			isa = PBXGroup;
+			children = (
+				363B10C8214D21F800371831 /* View */,
+				363B10D5214D247D00371831 /* MyWebCoordinator.swift */,
+			);
+			path = MyWebScene;
+			sourceTree = "<group>";
+		};
+		363B10C8214D21F800371831 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				363B10CF214D22DC00371831 /* MyWebViewController.swift */,
+				363B10D0214D22DC00371831 /* MyWebViewModel.swift */,
+				363B10D3214D231800371831 /* MyWebViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		7A87FB8A6F74773CA2FEC5ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -398,6 +426,7 @@
 				362D7EB7213B992600E0B026 /* TableViewController.storyboard in Resources */,
 				3602D60F2139747E00917A60 /* LaunchScreen.storyboard in Resources */,
 				3602D60C2139747E00917A60 /* Assets.xcassets in Resources */,
+				363B10D4214D231800371831 /* MyWebViewController.storyboard in Resources */,
 				3602D60A2139747B00917A60 /* TopViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,18 +495,21 @@
 				361ADC0D213BFDA60060A1D2 /* QiitaApi.swift in Sources */,
 				361ADC09213BF3600060A1D2 /* GithubApi.swift in Sources */,
 				361ADC0F213BFDD60060A1D2 /* QiitaApiTargetType.swift in Sources */,
+				363B10D1214D22DC00371831 /* MyWebViewController.swift in Sources */,
 				3602D625213A3ADF00917A60 /* AppCoordinator.swift in Sources */,
 				3609AC092143E6A70069D5E2 /* TableHeaderCoordinator.swift in Sources */,
 				3602D62F213A404200917A60 /* TopSceneCoordinator.swift in Sources */,
 				361ADC16213C28C10060A1D2 /* QiitaItemCell.swift in Sources */,
 				361ADC11213BFE0E0060A1D2 /* Qiita.swift in Sources */,
 				3602D632213A442200917A60 /* UIViewController+instantiate.swift in Sources */,
+				363B10D2214D22DC00371831 /* MyWebViewModel.swift in Sources */,
 				3602D6072139747B00917A60 /* TopViewController.swift in Sources */,
 				361ADC14213BFEB10060A1D2 /* QiitaUserItem.swift in Sources */,
 				3609AC052143E6000069D5E2 /* TableHeaderViewController.swift in Sources */,
 				362D7EC1213B9CBE00E0B026 /* TableViewModel.swift in Sources */,
 				3602D6052139747B00917A60 /* AppDelegate.swift in Sources */,
 				362D7EBB213B9C5200E0B026 /* TopViewModel.swift in Sources */,
+				363B10D6214D247D00371831 /* MyWebCoordinator.swift in Sources */,
 				362D7EB9213B9A7900E0B026 /* TableSceneCoordinator.swift in Sources */,
 				361ADC06213BF1470060A1D2 /* Github.swift in Sources */,
 				361ADC02213BEE990060A1D2 /* Profile.swift in Sources */,
