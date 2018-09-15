@@ -10,6 +10,7 @@ import Foundation
 import RxSwift
 
 protocol MyWebViewModelInputType: BaseViewModelInputType {
+    func dismissMyWebView()
 }
 
 protocol MyWebViewModelOutputType: BaseViewModelOuputType {
@@ -23,7 +24,16 @@ protocol MyWebViewModelType {
 class MyWebViewModel: MyWebViewModelType, MyWebViewModelOutputType, MyWebViewModelInputType {
     var input: MyWebViewModelInputType { return self }
     var output: MyWebViewModelOutputType { return self }
+
+    weak var router: MyWebCoordinatorRouterType?
+    init(_ router: MyWebCoordinatorRouterType) {
+        self.router = router
+    }
     
     func viewDidLoad() {
+    }
+
+    func dismissMyWebView() {
+        self.router?.dismiss()
     }
 }

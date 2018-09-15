@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-protocol TableCoordinatorRouterType {
+protocol TableCoordinatorRouterType: class {
     func dismissTableView()
 }
 
@@ -27,12 +27,9 @@ class TableCoordinator: BaseCoordinator, TableCoordinatorRouterType {
     }
 
     func dismissTableView() {
-        dismissPresentedView()
-    }
-    
-    private func dismissPresentedView() {
         if let presented = initialNavigationController?.presentedViewController {
             presented.dismiss(animated: true, completion: nil)
+            finishSubject.onNext(true)
         }
     }
 }

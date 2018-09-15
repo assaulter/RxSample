@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import RxSwift
 
 class TableHeaderViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    var cancelButton: UIBarButtonItem?
+    var viewModel: TableHeaderViewModelType!
     private let cellId = "header_sample"
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,31 +22,22 @@ class TableHeaderViewController: UIViewController {
         initializeView()
         initializeBinding()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }
+
 // MARK: - BaseTypeView
 extension TableHeaderViewController: BaseViewType {
     func initializeBinding() {
+        cancelButton?.rx.tap.asDriver().drive(onNext: { [weak self] (_) in
+            self?.viewModel.input.dismissTableHeaderView()
+        })
+        .disposed(by: disposeBag)
     }
     
     func initializeView() {
-        // title
+        // navigation
         navigationItem.title = "Table Header"
+        cancelButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: nil, action: nil)
+        navigationItem.rightBarButtonItem = cancelButton
         // tableview
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
         tableView.sectionHeaderHeight = 200

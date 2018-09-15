@@ -17,8 +17,15 @@ class BaseCoordinator: CoordinatorType {
     var initialNavigationController: UINavigationController?
     var finishObserable: Observable<Bool>?
     var childCoordinators = [AppCoordinatorNavigation: CoordinatorType]()
+    let finishSubject = PublishSubject<Bool>()
+
+    init() {
+        finishObserable = finishSubject.asObservable()
+    }
+
     func start() {
     }
+
     func finish(_ index: AppCoordinatorNavigation) {
         // remove reference
         childCoordinators.removeValue(forKey: index)

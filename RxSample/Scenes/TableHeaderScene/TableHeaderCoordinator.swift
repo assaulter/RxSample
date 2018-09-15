@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-protocol TableHeaderCoordinatorRouterType {
+protocol TableHeaderCoordinatorRouterType: class {
     func dismissTableHeaderView()
 }
 
@@ -17,6 +17,7 @@ class TableHeaderCoordinator: BaseCoordinator, TableHeaderCoordinatorRouterType 
     
     override func start() {
         let tableHeaderViewController = TableHeaderViewController.instantiate()
+        tableHeaderViewController.viewModel = TableHeaderViewModel(self)
         let navigationController = UINavigationController(rootViewController: tableHeaderViewController)
         
         if let presented = initialNavigationController?.presentedViewController {
@@ -27,12 +28,9 @@ class TableHeaderCoordinator: BaseCoordinator, TableHeaderCoordinatorRouterType 
     }
     
     func dismissTableHeaderView() {
-        dismissPresentedView()
-    }
-    
-    private func dismissPresentedView() {
         if let presented = initialNavigationController?.presentedViewController {
             presented.dismiss(animated: true, completion: nil)
+            finishSubject.onNext(true)
         }
     }
 }

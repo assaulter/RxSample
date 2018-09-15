@@ -43,6 +43,7 @@
 		363B10D2214D22DC00371831 /* MyWebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363B10D0214D22DC00371831 /* MyWebViewModel.swift */; };
 		363B10D4214D231800371831 /* MyWebViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 363B10D3214D231800371831 /* MyWebViewController.storyboard */; };
 		363B10D6214D247D00371831 /* MyWebCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363B10D5214D247D00371831 /* MyWebCoordinator.swift */; };
+		363B10D8214D2D4700371831 /* TableHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363B10D7214D2D4700371831 /* TableHeaderViewModel.swift */; };
 		D1D2CEE6193868F376702BE2 /* Pods_RxSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE72AD90E4E2F8F87991487E /* Pods_RxSample.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,7 @@
 		363B10D0214D22DC00371831 /* MyWebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWebViewModel.swift; sourceTree = "<group>"; };
 		363B10D3214D231800371831 /* MyWebViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyWebViewController.storyboard; sourceTree = "<group>"; };
 		363B10D5214D247D00371831 /* MyWebCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWebCoordinator.swift; sourceTree = "<group>"; };
+		363B10D7214D2D4700371831 /* TableHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeaderViewModel.swift; sourceTree = "<group>"; };
 		74B751192E8EB18D4BAFCCDC /* Pods-RxSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSample/Pods-RxSample.release.xcconfig"; sourceTree = "<group>"; };
 		AE72AD90E4E2F8F87991487E /* Pods_RxSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC3F9F1D35F0BB0EE74F634C /* Pods-RxSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSample/Pods-RxSample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 			children = (
 				3609AC042143E6000069D5E2 /* TableHeaderViewController.swift */,
 				3609AC062143E60E0069D5E2 /* TableHeaderViewController.storyboard */,
+				363B10D7214D2D4700371831 /* TableHeaderViewModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -507,6 +510,7 @@
 				361ADC14213BFEB10060A1D2 /* QiitaUserItem.swift in Sources */,
 				3609AC052143E6000069D5E2 /* TableHeaderViewController.swift in Sources */,
 				362D7EC1213B9CBE00E0B026 /* TableViewModel.swift in Sources */,
+				363B10D8214D2D4700371831 /* TableHeaderViewModel.swift in Sources */,
 				3602D6052139747B00917A60 /* AppDelegate.swift in Sources */,
 				362D7EBB213B9C5200E0B026 /* TopViewModel.swift in Sources */,
 				363B10D6214D247D00371831 /* MyWebCoordinator.swift in Sources */,

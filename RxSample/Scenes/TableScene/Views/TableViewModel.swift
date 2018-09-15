@@ -29,7 +29,7 @@ class TableViewModel: TableViewModelType, TableViewModelInputType, TableViewMode
     private let disposeBag = DisposeBag()
     private let items: PublishSubject<[QiitaUserItem]> = PublishSubject<[QiitaUserItem]>()
     
-    let router: TableCoordinatorRouterType
+    weak var router: TableCoordinatorRouterType?
     init(_ routerType: TableCoordinatorRouterType) {
         self.router = routerType
         itemsObservable = items.asObserver()
@@ -46,6 +46,6 @@ class TableViewModel: TableViewModelType, TableViewModelInputType, TableViewMode
     }
     
     func dismissTableView() {
-        router.dismissTableView()
+        router?.dismissTableView()
     }
 }
