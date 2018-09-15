@@ -11,6 +11,7 @@ import RxSwift
 
 protocol TopCoordinatorRouterType {
     func startTableCoordinator()
+    func startTableHeaderCoordinator()
 }
 
 class TopCoordinator: BaseCoordinator, TopCoordinatorRouterType {
@@ -31,5 +32,16 @@ class TopCoordinator: BaseCoordinator, TopCoordinatorRouterType {
         }, onError: nil, onCompleted: nil, onDisposed: nil)
         .disposed(by: disposeBag)
         tableCoordinator.start()
+    }
+    
+    func startTableHeaderCoordinator() {
+        let tableHeaderCoordinator = TableHeaderCoordinator()
+        tableHeaderCoordinator.initialNavigationController = initialNavigationController
+        childCoordinators[.tableHeaderScene] = tableHeaderCoordinator
+        tableHeaderCoordinator.finishObserable?.subscribe(onNext: { [weak self] (_) in
+            self?.finish(.tableHeaderScene)
+        })
+        .disposed(by: disposeBag)
+        tableHeaderCoordinator.start()
     }
 }

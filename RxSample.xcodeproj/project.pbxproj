@@ -19,6 +19,9 @@
 		3602D62F213A404200917A60 /* TopSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3602D62E213A404200917A60 /* TopSceneCoordinator.swift */; };
 		3602D632213A442200917A60 /* UIViewController+instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3602D631213A442200917A60 /* UIViewController+instantiate.swift */; };
 		3602D634213A450000917A60 /* NSObject+className.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3602D633213A450000917A60 /* NSObject+className.swift */; };
+		3609AC052143E6000069D5E2 /* TableHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3609AC042143E6000069D5E2 /* TableHeaderViewController.swift */; };
+		3609AC072143E60E0069D5E2 /* TableHeaderViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3609AC062143E60E0069D5E2 /* TableHeaderViewController.storyboard */; };
+		3609AC092143E6A70069D5E2 /* TableHeaderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3609AC082143E6A70069D5E2 /* TableHeaderCoordinator.swift */; };
 		361ADC02213BEE990060A1D2 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361ADC01213BEE990060A1D2 /* Profile.swift */; };
 		361ADC04213BF0CE0060A1D2 /* GithubApiTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361ADC03213BF0CE0060A1D2 /* GithubApiTargetType.swift */; };
 		361ADC06213BF1470060A1D2 /* Github.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361ADC05213BF1470060A1D2 /* Github.swift */; };
@@ -66,6 +69,9 @@
 		3602D62E213A404200917A60 /* TopSceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSceneCoordinator.swift; sourceTree = "<group>"; };
 		3602D631213A442200917A60 /* UIViewController+instantiate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+instantiate.swift"; sourceTree = "<group>"; };
 		3602D633213A450000917A60 /* NSObject+className.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+className.swift"; sourceTree = "<group>"; };
+		3609AC042143E6000069D5E2 /* TableHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeaderViewController.swift; sourceTree = "<group>"; };
+		3609AC062143E60E0069D5E2 /* TableHeaderViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TableHeaderViewController.storyboard; sourceTree = "<group>"; };
+		3609AC082143E6A70069D5E2 /* TableHeaderCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeaderCoordinator.swift; sourceTree = "<group>"; };
 		361ADC01213BEE990060A1D2 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		361ADC03213BF0CE0060A1D2 /* GithubApiTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubApiTargetType.swift; sourceTree = "<group>"; };
 		361ADC05213BF1470060A1D2 /* Github.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github.swift; sourceTree = "<group>"; };
@@ -166,6 +172,7 @@
 		3602D62B213A400500917A60 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				3609AC022143E5DA0069D5E2 /* TableHeaderScene */,
 				362D7EB2213B98EC00E0B026 /* TableScene */,
 				3602D62C213A400C00917A60 /* TopScene */,
 			);
@@ -198,6 +205,24 @@
 				3602D633213A450000917A60 /* NSObject+className.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3609AC022143E5DA0069D5E2 /* TableHeaderScene */ = {
+			isa = PBXGroup;
+			children = (
+				3609AC032143E5E90069D5E2 /* Views */,
+				3609AC082143E6A70069D5E2 /* TableHeaderCoordinator.swift */,
+			);
+			path = TableHeaderScene;
+			sourceTree = "<group>";
+		};
+		3609AC032143E5E90069D5E2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3609AC042143E6000069D5E2 /* TableHeaderViewController.swift */,
+				3609AC062143E60E0069D5E2 /* TableHeaderViewController.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		361ADBFE213BEC150060A1D2 /* Api */ = {
@@ -369,6 +394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				361ADC1A213C2A230060A1D2 /* QiitaItemCell.xib in Resources */,
+				3609AC072143E60E0069D5E2 /* TableHeaderViewController.storyboard in Resources */,
 				362D7EB7213B992600E0B026 /* TableViewController.storyboard in Resources */,
 				3602D60F2139747E00917A60 /* LaunchScreen.storyboard in Resources */,
 				3602D60C2139747E00917A60 /* Assets.xcassets in Resources */,
@@ -441,12 +467,14 @@
 				361ADC09213BF3600060A1D2 /* GithubApi.swift in Sources */,
 				361ADC0F213BFDD60060A1D2 /* QiitaApiTargetType.swift in Sources */,
 				3602D625213A3ADF00917A60 /* AppCoordinator.swift in Sources */,
+				3609AC092143E6A70069D5E2 /* TableHeaderCoordinator.swift in Sources */,
 				3602D62F213A404200917A60 /* TopSceneCoordinator.swift in Sources */,
 				361ADC16213C28C10060A1D2 /* QiitaItemCell.swift in Sources */,
 				361ADC11213BFE0E0060A1D2 /* Qiita.swift in Sources */,
 				3602D632213A442200917A60 /* UIViewController+instantiate.swift in Sources */,
 				3602D6072139747B00917A60 /* TopViewController.swift in Sources */,
 				361ADC14213BFEB10060A1D2 /* QiitaUserItem.swift in Sources */,
+				3609AC052143E6000069D5E2 /* TableHeaderViewController.swift in Sources */,
 				362D7EC1213B9CBE00E0B026 /* TableViewModel.swift in Sources */,
 				3602D6052139747B00917A60 /* AppDelegate.swift in Sources */,
 				362D7EBB213B9C5200E0B026 /* TopViewModel.swift in Sources */,
