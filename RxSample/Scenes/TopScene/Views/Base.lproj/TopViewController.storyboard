@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ZfJ-X3-6po">
-                                <rect key="frame" x="118.5" y="295.5" width="138" height="76"/>
+                                <rect key="frame" x="118.5" y="272.5" width="138" height="122"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xuS-iq-ZmJ" userLabel="Table Scene">
                                         <rect key="frame" x="27" y="0.0" width="84" height="30"/>
@@ -28,6 +28,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulb-nI-Dta">
                                         <rect key="frame" x="0.0" y="46" width="138" height="30"/>
                                         <state key="normal" title="Table Header Scene"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXm-Kb-wjm">
+                                        <rect key="frame" x="17.5" y="92" width="103" height="30"/>
+                                        <state key="normal" title="My Web Scene"/>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -41,6 +45,7 @@
                     </view>
                     <connections>
                         <outlet property="button" destination="xuS-iq-ZmJ" id="WMt-Dv-4JO"/>
+                        <outlet property="myWebButton" destination="bXm-Kb-wjm" id="6pq-3o-9Kh"/>
                         <outlet property="tableHeaderButton" destination="ulb-nI-Dta" id="Kye-mv-w2i"/>
                     </connections>
                 </viewController>

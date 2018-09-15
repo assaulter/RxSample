@@ -1,32 +1,33 @@
 //
-//  File.swift
+//  MyWebCoordinator.swift
 //  RxSample
 //
-//  Created by Kazuki Kubo on 2018/09/02.
+//  Created by Kazuki Kubo on 2018/09/15.
 //  Copyright © 2018年 Kazuki Kubo. All rights reserved.
 //
 
 import Foundation
 import RxSwift
 
-protocol TableCoordinatorRouterType: class {
-    func dismissTableView()
+protocol MyWebCoordinatorRouterType: class {
+    func dismiss()
 }
 
-class TableCoordinator: BaseCoordinator, TableCoordinatorRouterType {
+class MyWebCoordinator: BaseCoordinator, MyWebCoordinatorRouterType {
+
     override func start() {
-        let tableViewController = TableViewController.instantiate()
-        tableViewController.viewModel = TableViewModel(self)
-        let navigationController = UINavigationController(rootViewController: tableViewController)
+        let myWebViewController = MyWebViewController.instantiate()
+        myWebViewController.viewModel = MyWebViewModel(self)
+        let navigationController = UINavigationController(rootViewController: myWebViewController)
         
         if let presented = initialNavigationController?.presentedViewController {
             presented.present(navigationController, animated: true) {
-                print("complete")
+                print("MyWebCoordinator#start")
             }
         }
     }
-
-    func dismissTableView() {
+    
+    func dismiss() {
         if let presented = initialNavigationController?.presentedViewController {
             presented.dismiss(animated: true, completion: nil)
             finishSubject.onNext(true)
